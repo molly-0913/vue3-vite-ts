@@ -1,0 +1,379 @@
+.submit-button {
+  --el-button-bg-color: var(--brand-color);
+  --el-button-border-color: var(--brand-color);
+  --el-button-text-color: var(--normal-btn-text-color);
+  --el-button-hover-bg-color: var(--brand-color);
+  --el-button-hover-text-color: var(--normal-btn-text-color);
+  --el-button-hover-border-color: var(--brand-color);
+  --el-button-active-border-color: var(--brand-color);
+  --el-button-disabled-text-color: var(--normal-btn-text-color-disabled);
+  --el-button-disabled-bg-color: var(--normal-btn-color-disabled);
+  border: none !important;
+  --el-border-radius-base: 5px;
+  --el-font-size-base: 18px;
+  height: 52px;
+  width: 100%;
+}
+
+.plain-button {
+  --el-button-bg-color: var(--plain-color);
+  --el-button-border-color: var(--brand-color);
+  --el-button-hover-border-color: var(--brand-color);
+  --el-button-active-border-color: var(--brand-color);
+  --el-button-text-color: var(--plain-text-color);
+  --el-button-hover-text-color: var(--normal-btn-text-color);
+  --el-button-disabled-text-color: var(--plain-text-color);
+  --el-button-disabled-bg-color: transparent;
+  --el-button-disabled-border-color: var(--brand-color);
+  --el-border-radius-base: 5px;
+  --el-font-size-base: 18px;
+  height: 52px;
+  width: 100%;
+}
+
+.el-button.plain-button {
+  --el-button-hover-text-color: var(--plain-hover-text-color);
+  --el-button-hover-bg-color: var(--plain-color);
+  --el-button-hover-border-color: var(--brand-color);
+}
+.is-disabled.plain-button {
+  opacity: 0.4;
+}
+
+.normal-form {
+  --el-color-danger: var(--normal-color-danger-msg);
+  .el-form-item {
+    margin-bottom: 28px;
+  }
+  .el-input {
+    --el-input-text-color: var(--normal-input-text-color);
+    --el-input-bg-color: var(--normal-input-bg-color);
+    --el-disabled-bg-color: var(--normal-input-bg-color);
+    --el-disabled-border-color: var(--normal-input-border-color);
+    --el-input-border-color: var(--normal-input-border-color);
+    --el-input-hover-border-color: var(--normal-border-color-hover);
+    --el-input-focus-border-color: var(--normal-border-color-focus);
+    --el-input-height: 44px;
+    --el-input-placeholder-color: var(--normal-color-placeholder);
+    .el-input-group__append {
+      background-color: var(--normal-input-bg-color);
+      position: relative;
+      // box-shadow: -2 0 0 0 var(--normal-input-bg-color);
+    }
+  }
+
+  .el-select {
+    --el-select-border-color-hover: var(--normal-border-color-hover);
+    --el-select-close-hover-color: var(--normal-border-color-hover);
+    --el-select-input-color: var(--normal-input-text-color);
+    --el-select-disabled-color: var(--normal-input-bg-color);
+    --el-select-disabled-border: var(--normal-input-border-color);
+    --el-select-input-focus-border-color: var(--normal-border-color-hover);
+    --el-border-color: var(--normal-input-border-color);
+    .el-select__wrapper {
+      height: 44px;
+      background-color: var(--normal-input-bg-color);
+    }
+    .el-select__wrapper.is-focused {
+      box-shadow: 0 0 0 1px var(--normal-border-color-hover) inset;
+    }
+    .el-select__wrapper.is-hovering {
+      box-shadow: 0 0 0 1px var(--normal-border-color-hover) inset;
+    }
+    .el-select__wrapper .el-select__placeholder {
+      color: var(--normal-input-text-color);
+    }
+
+    .el-select__wrapper .el-select__placeholder.is-transparent {
+      color: var(--normal-color-placeholder);
+    }
+  }
+
+  .el-form-item {
+    --font-size: 14px;
+  }
+  .is-error {
+    .el-input-group__append {
+      --el-input-border-color: var(--normal-color-danger-msg) !important;
+    }
+  }
+  .is-focus + .el-input-group__append {
+    --el-input-border-color: var(--normal-border-color-hover);
+  }
+  .el-input__wrapper:hover {
+    & + .el-input-group__append {
+      --el-input-border-color: var(--normal-border-color-hover);
+    }
+  }
+  .el-form-item__error {
+    padding-top: 4px;
+  }
+}
+
+.current-form {
+  .el-input {
+    --el-input-bg-color: var(--card-bg-color);
+    .el-input__inner {
+      text-align: center;
+    }
+  }
+}
+.normal-form .current-form {
+  margin-bottom: 16px;
+}
+
+.current-card {
+  .el-form-item__label {
+    color: var(--text-main-color) !important;
+  }
+}
+
+/* 针对现代浏览器 */
+.el-input::placeholder {
+  font-size: 12px !important;
+}
+
+/* 针对 WebKit 浏览器（如 Chrome、Safari） */
+.el-input::-webkit-input-placeholder {
+  font-size: 12px !important;
+}
+
+/* 针对 Mozilla 浏览器（如 Firefox） */
+.el-input::-moz-placeholder {
+  font-size: 12px !important;
+}
+
+/* 针对旧版本的 Internet Explorer */
+.el-input::-ms-input-placeholder {
+  font-size: 12px !important;
+}
+
+/* 针对 Edge 浏览器 */
+.el-input::-ms-input-placeholder {
+  font-size: 12px !important;
+}
+
+.el-overlay {
+  position: absolute !important;
+}
+
+.normal-drawer {
+  --el-drawer-bg-color: var(--normal-drawer-bg-color);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 80%;
+  .el-drawer__header {
+    color: var(--text-main-color);
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    .el-drawer__title {
+      font-size: 18px;
+    }
+    .el-drawer__close-btn {
+      position: absolute;
+      right: 24px;
+    }
+  }
+  .el-drawer__body {
+    padding: 0 40px 40px 40px;
+    .el-drawer-content {
+      background-color: var(--card-bg-color);
+      border-radius: 10px;
+      margin-bottom: 40px;
+      padding: 24px 16px;
+    }
+  }
+  .el-drawer__body {
+    /* 针对 Webkit 浏览器 (Chrome, Safari) 自定义滚动条 */
+    &::-webkit-scrollbar {
+      width: 6px; /* 设置滚动条宽度，设置为0px可以完全隐藏 */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* 滚动条轨道的背景色，设为透明 */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.156); /* 滚动条的颜色 */
+      border-radius: 10px; /* 滚动条的圆角 */
+      border: 3px solid transparent; /* 滚动条边框，使其不会占用布局 */
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .normal-drawer {
+    .el-drawer__header {
+      padding: 16px;
+      .el-drawer__close-btn {
+        right: 16px;
+      }
+    }
+    .el-drawer__body {
+      padding: 0 16px 20px 16px;
+      .el-drawer-content {
+        background-color: var(--card-bg-color);
+      }
+    }
+  }
+}
+
+.inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .el-form-item {
+    width: calc(50% - 8px);
+  }
+}
+
+.form-select {
+  --el-bg-color-overlay: var(--normal-input-bg-color);
+  border: 1px solid var(--select-option-border-color) !important;
+  width: 206px !important;
+  .el-popper__arrow {
+    display: none;
+  }
+  .el-select-dropdown__item {
+    color: var(--select-option-text-color);
+  }
+
+  .is-selected,
+  .is-hovering {
+    color: var(--normal-input-text-color);
+    background-color: var(--select-option-hover-color);
+  }
+}
+
+@media (max-width: 540px) {
+  .form-select {
+    width: calc(50vw - 38px) !important;
+  }
+}
+
+.lang-select {
+  --el-bg-color-overlay: var(--normal-input-bg-color);
+  border: 1px solid var(--select-option-border-color) !important;
+  width: 150px !important;
+}
+.lang-select > .el-popper__arrow::before {
+  border-color: var(--select-option-border-color) !important;
+  background-color: var(--select-option-arrow-bg-color) !important;
+}
+
+.lang-select .el-dropdown-menu__item:not(.is-disabled):focus {
+  color: var(--normal-input-text-color);
+  background-color: var(--select-option-hover-color);
+}
+.lang-select .el-dropdown-menu__item.is-disabled {
+  color: var(--normal-input-text-color);
+  background-color: var(--select-option-hover-color);
+}
+
+.lang-select .el-dropdown-menu {
+  padding: 0;
+}
+
+.form-checkbox {
+  --el-checkbox-checked-bg-color: var(--brand-color);
+  --el-checkbox-input-border-color-hover: var(--brand-color);
+  --el-checkbox-bg-color: transparent;
+  --el-checkbox-checked-text-color: var(--checkbox-text-color);
+  --el-checkbox-text-color: var(--checkbox-text-color);
+  --el-checkbox-checked-input-border-color: var(--brand-color);
+  --el-checkbox-input-border: 1px solid var(--brand-color);
+  --el-checkbox-input-height: 16px;
+  --el-checkbox-input-width: 16px;
+  .el-checkbox__inner:after {
+    height: 56%;
+    width: 26%;
+    top: 5%;
+    left: 34%;
+  }
+}
+
+@media (max-width: 540px) {
+  .form-checkbox {
+    --el-checkbox-input-height: 14px;
+    --el-checkbox-input-width: 14px;
+    .el-checkbox__inner:after {
+      height: 58%;
+      width: 26%;
+      top: 2%;
+      left: 34%;
+    }
+  }
+}
+
+.el-overlay-dialog {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.normal-dialog {
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 24px 30px;
+  background-color: var(--normal-dialog-bg-color);
+  backdrop-filter: blur(16px);
+  border-radius: 10px;
+  .el-dialog__header .el-dialog__title {
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--text-main-color);
+  }
+  .dialog-footer {
+    display: flex;
+    & > div {
+      flex-grow: 1;
+      min-width: 45%;
+      & + div {
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.normal-dialog-btn {
+  height: 36px !important;
+  font-size: 14px !important;
+}
+
+.el-button.normal-dialog-close-btn {
+  --el-button-bg-color: transparent;
+  --el-button-hover-bg-color: transparent !important;
+}
+
+.el-button.normal-dialog-close-btn.is-loading::before {
+  background-color: transparent;
+}
+
+.custom-message {
+  position: absolute;
+  --el-message-bg-color: var(--custom-message-bg-color);
+  border-width: 0;
+  --el-message-text-color: var(--text-main-color);
+  backdrop-filter: blur(81px);
+  /* 成功类型消息的图标 */
+  .el-message-icon--success {
+    background: url('/svg/success.svg') no-repeat center center;
+    background-size: contain;
+    color: #00000000;
+  }
+
+  /* 警告类型消息的图标 */
+  .el-message-icon--warning {
+    background: url('/svg/warning.svg') no-repeat center center;
+    background-size: contain;
+    color: #00000000;
+  }
+
+  /* 错误类型消息的图标 */
+  .el-message-icon--error {
+    background: url('/svg/fail.svg') no-repeat center center;
+    background-size: contain;
+    color: #00000000;
+  }
+}
