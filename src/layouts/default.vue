@@ -1,14 +1,16 @@
 <template>
   <div class="layout-default app-bg">
     <Header />
-    <el-scrollbar class="scrollbar">
+    <el-scrollbar class="layout-scrollbar">
       <router-view />
     </el-scrollbar>
+    <BottomNavigationBar />
   </div>
 </template>
 
 <script setup lang="ts" name="LayoutDefault">
-const Header = defineAsyncComponent(() => import('./components/Header/index.vue'))
+import Header from './components/Header/index.vue'
+import BottomNavigationBar from './components/BottomNavigationBar/index.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -17,7 +19,7 @@ const Header = defineAsyncComponent(() => import('./components/Header/index.vue'
   flex-direction: column;
   height: 100%;
 }
-.scrollbar {
+.layout-scrollbar {
   flex-grow: 1;
   width: 100%;
 }

@@ -352,10 +352,9 @@
 
 .custom-message {
   position: absolute;
-  --el-message-bg-color: var(--custom-message-bg-color);
+  --el-message-bg-color: var(--toast-bg-color);
   border-width: 0;
-  --el-message-text-color: var(--text-main-color);
-  backdrop-filter: blur(81px);
+  --el-message-text-color: var(--main-text-color);
   /* 成功类型消息的图标 */
   .el-message-icon--success {
     background: url('/svg/success.svg') no-repeat center center;

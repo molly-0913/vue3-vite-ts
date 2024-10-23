@@ -10,13 +10,13 @@ router.beforeEach(async (to, from, next) => {
     const { token, billNo } = useCounterStore()
     console.log('aesKey=>', aesKey)
     if (!aesKey) {
-      next('/welcome')
+      next('/index')
     }
     if (!token) {
-      next('/welcome')
+      next('/index')
     }
     if (to.name === 'OrderDetail' && !billNo) {
-      next('/welcome')
+      next('/index')
     }
   }
   next()

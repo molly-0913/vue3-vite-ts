@@ -69,6 +69,7 @@
     "prettier": "^3.2.5",
     "rollup-plugin-esbuild": "^6.1.1",
     "rollup-plugin-external-globals": "^0.12.0",
+    "rollup-plugin-visualizer": "^5.12.0",
     "sass": "^1.77.1",
     "simple-git-hooks": "^2.11.1",
     "svgo": "^3.3.2",

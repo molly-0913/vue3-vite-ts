@@ -1,2 +1,23 @@
 :root {
+  --main-bg-color: rgba(23, 23, 26, 1);
+  --card-bg-color: rgba(31, 31, 34, 1);
+  --card-border-color: rgba(43, 43, 43, 1);
+  --dialog-bg-color: rgba(34, 34, 34, 1);
+  --dialog-model-bg-color: rgba(0, 0, 0, 0.5);
+  --toast-bg-color: rgba(18, 18, 18, 1);
+  --single-brand-color: rgba(100, 218, 229, 1);
+  --gradient-left-color: rgba(87, 199, 211, 1);
+  --gradient-right-color: rgba(125, 240, 253, 1);
+  --main-text-color: rgba(255, 255, 255, 1);
+  --un-active-text-color: rgba(154, 154, 160, 1);
+  --pl-text-color: rgba(67, 67, 67, 1);
+  --disable-btn-text-color: rgba(255, 255, 255, 1);
+  --disable-btn-bg-color: rgba(56, 56, 56, 1);
+  --active-btn-text-color: rgba(23, 23, 26, 1);
+  --danger-text-color: rgba(255, 68, 95, 1);
+  --input-focus-border-color: rgba(255, 255, 255, 1);
+  --input-normal-border-color: rgba(58, 58, 63, 1);
+  --delete-btn-bg-color: rgba(255, 68, 95, 1);
+  --up-text-color: rgba(255, 68, 95, 1);
+  --low-text-color: rgba(88, 215, 160, 1);
 }

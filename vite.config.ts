@@ -32,6 +32,27 @@ export default ({ mode, command }: any) => {
       outDir: `dist/${mode}`,
       sourcemap: env.VITE_BUILD_SOURCEMAP === 'true',
       target: ['es2015', 'ios11'],
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('encryptlong')) {
+                return 'encryptlong' // 将 encryptlong 单独打包
+              }
+              if (id.includes('jsrsasign')) {
+                return 'jsrsasign' // 将 jsrsasign 单独打包
+              }
+              if (id.includes('buffer')) {
+                return 'buffer' // 将 buffer 单独打包
+              }
+              if (id.includes('crypto')) {
+                return 'crypto' // 将 buffer 单独打包
+              }
+              return 'vendor' // 其他库打包到 vendor.js
+            }
+          }
+        }
+      },
       terserOptions: {
         compress: {
           drop_console: env.NODE_ENV !== 'fat', // 移除 console 输出

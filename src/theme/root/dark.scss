@@ -1,5 +1,25 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
+    --main-bg-color: var(--main-bg-color);
+    --card-bg-color: var(--card-bg-color);
+    --card-border-color: var(--card-border-color);
+    --dialog-bg-color: var(--dialog-bg-color);
+    --dialog-model-bg-color: var(--dialog-model-bg-color);
+    --toast-bg-color: var(--toast-bg-color);
+    --single-brand-color: var(--single-brand-color);
+    --gradient-left-color: var(--gradient-left-color);
+    --gradient-right-color: var(--gradient-right-color);
+    --main-text-color: var(--main-text-color);
+    --un-active-text-color: var(--un-active-text-color);
+    --pl-text-color: var(--pl-text-color);
+    --disable-btn-text-color: var(--disable-btn-text-color);
+    --disable-btn-bg-color: var(--disable-btn-bg-color);
+    --active-btn-text-color: var(--active-btn-text-color);
+    --danger-text-color: var(--danger-text-color);
+    --input-focus-border-color: var(--input-focus-border-color);
+    --input-normal-border-color: var(--input-normal-border-color);
+    --delete-btn-bg-color: var(--delete-btn-bg-color);
+    --up-text-color: var(--up-text-color);
+    --low-text-color: var(--low-text-color);
   }
 }

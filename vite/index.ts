@@ -14,6 +14,7 @@ import cdnImport from './plugins/cnd-import'
 import type { PluginOption } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import rollupVisualizer from './plugins/visualizer'
 
 export default function createVitePlugins(
   viteEnv: Record<string, string>,
@@ -55,10 +56,13 @@ export default function createVitePlugins(
   // 创建 banner
   vitePlugins.push(createBanner())
   // 脱离浏览器而显示为一个独立程序的样子使用
-  // vitePlugins.push(createVitePWA())
+  vitePlugins.push(createVitePWA())
 
   // cdn引入
   isBuild && vitePlugins.push(cdnImport(command))
+
+  //打包分析
+  isBuild && vitePlugins.push(rollupVisualizer())
 
   return vitePlugins
 }

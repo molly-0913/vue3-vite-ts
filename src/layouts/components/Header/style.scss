@@ -1,0 +1,21 @@
+.default-header {
+  height: 44px;
+  width: calc(100% - 32px);
+  flex-shrink: 0;
+  background-color: var(--main-bg-color);
+  display: flex;
+  padding: 0 16px;
+  justify-content: space-between;
+  align-items: center;
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    height: 24px;
+    cursor: pointer;
+  }
+  img + img {
+    margin-left: 16px;
+  }
+}
