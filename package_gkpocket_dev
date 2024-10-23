@@ -1,0 +1,13 @@
+#!usr/bin/env groovy
+/**
+* Compile Pipeline Def
+*/
+@Library('library')_
+
+npmSCM_v2(
+  'public_capital_assistant_gkpocket_h5',
+  'capital',
+  'assistant_gkpocket_h5_dev',
+  'ls',
+  'dist/fat/*'
+)

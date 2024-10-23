@@ -1,4 +1,3 @@
-import './utils/initData'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 // import { registerSW } from 'virtual:pwa-register'
@@ -30,7 +29,7 @@ import 'default-passive-events'
 import { loadCssById } from './utils/loadCssById'
 import directives from './directives'
 
-loadCssById(() => {
+loadCssById('/styles/theme-01.css', () => {
   const app = createApp(App)
 
   // 注册全局 event mitt方法

@@ -1,9 +1,9 @@
 import { ref, reactive } from 'vue'
 import { defineStore } from 'pinia'
-import router, { authRouter } from '@/router'
+import router from '@/router'
 import dayjs from 'dayjs'
 import { Base64 } from 'js-base64'
-import { getQueryString } from '@/utils/parseUrl'
+import { getQueryString } from '@/utils/parseTools'
 import { defaultBillingAddressForm, defaultOrderDetail, defaultUserInfo } from '@/defaultValue'
 import { getOrderDetailApi, getOrderInfo } from '@/api/cashier'
 import { getUserCardList, getCardBillInfo } from '@/api/naticPay'
@@ -150,7 +150,7 @@ export const useCounterStore = defineStore(
         }
         return
       }
-      router.addRoute('/', authRouter)
+
       setTimeout(() => {
         if (['OrderDetail', 'KycSumsub'].includes((router.currentRoute.value.name as any) || '')) {
           return

@@ -1,0 +1,1 @@
+import{_ as e}from"./index-7Tuapn8t.js";const o={},c={class:"welcome"},l=[(e=>(Vue.pushScopeId("data-v-f58b8e6e"),e=e(),Vue.popScopeId(),e))((()=>Vue.createElementVNode("div",{class:"welcome-logo"},null,-1)))],t=e(o,[["render",function(e,o){return Vue.openBlock(),Vue.createElementBlock("div",c,l)}],["__scopeId","data-v-f58b8e6e"]]);export{t as default};

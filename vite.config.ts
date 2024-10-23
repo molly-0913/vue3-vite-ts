@@ -17,22 +17,12 @@ export default ({ mode, command }: any) => {
     // 开发服务器选项 https://cn.vitejs.dev/config/#server-options
     server: {
       open: true,
-      port: 9010,
+      port: Number(env.VITE_APP_PORT),
       proxy: {
-        '/proxy': {
-          target: env.VITE_APP_API_BASEURL,
-          changeOrigin: command === 'serve' && env.VITE_OPEN_PROXY === 'true',
-          rewrite: (path) => path.replace(/\/proxy/, '')
-        },
         '/api': {
           target: env.VITE_APP_API_BASEURL,
           changeOrigin: true,
           rewrite: (path) => path.replace(/\/api/, '')
-        },
-        '/socket': {
-          target: env.VITE_APP_SOCKET_API,
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/\/socket/, '')
         }
       }
     },

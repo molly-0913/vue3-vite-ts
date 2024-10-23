@@ -28,3 +28,9 @@ export function maskEmail(email?: string) {
 export function maskCreditCard(card: string) {
   return `**** ${card.slice(-4)}`
 }
+
+export const getQueryString = (name: string) => {
+  const url_string = window.location.href
+  const url = new URL(url_string)
+  return url.searchParams.get(name)
+}
