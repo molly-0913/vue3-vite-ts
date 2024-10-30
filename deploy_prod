@@ -5,9 +5,9 @@
 @Library('library')_
 
 npmSCM_v2(
-  'public_capital_assistant_gkpocket_mob',
+  'public_capital_lucky_wallet_mob',
   'capital',
-  'assistant_gkpocket_mob',
+  'lucky_wallet_mob',
   'ls',
   'dist/prod/*'
 )

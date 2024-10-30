@@ -5,9 +5,9 @@
 @Library('library')_
 
 npmSCM_v2(
-  'public_capital_assistant_gkpocket_h5',
+  'public_capital_lucky_wallet_mob',
   'capital',
-  'assistant_gkpocket_h5_emergency',
+  'lucky_wallet_mob_uat',
   'ls',
-  'dist/fat/*'
+  'dist/uat/*'
 )
