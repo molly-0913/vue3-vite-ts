@@ -43,7 +43,16 @@ const router = createRouter({
       name: 'KycSumsub',
       meta: {
         title: 'router.kyc_sumsub',
-        auth: true
+        auth: false
+      }
+    },
+    {
+      path: '/orderDetail',
+      component: () => import('@/pages/orderDetail/index.vue'),
+      name: 'orderDetail',
+      meta: {
+        title: 'router.orderDetail',
+        auth: false
       }
     },
     {
